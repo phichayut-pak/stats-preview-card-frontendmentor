@@ -40,7 +40,7 @@ const App = () => {
         </div>
 
         <div id="image" className="relative order-1 md:order-2 right-0 top-0 w-full">
-          <div className="absolute bg-accent opacity-[.65] inset-0 rounded-t-lg md:rounded-r-lg"></div>
+          <div className={`absolute bg-accent opacity-[.65] inset-0 ${window.innerWidth > 768 ? 'rounded-r-lg' : 'rounded-t-lg'}`}></div>
           {window.innerWidth > 768 ? <img src={desktopImg} alt="" className='w-full h-full rounded-r-lg'/> : <img src={mobileImg} alt="" className='w-full h-full rounded-t-lg'/> }
         </div>
       </div>
